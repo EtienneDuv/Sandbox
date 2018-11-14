@@ -17,11 +17,25 @@ body>div {
 .center {
     text-align: center;
 }
-
+/* === CLOCK === */
+    #clock1 {
+        max-height: 30%;
+    }
+    #face {
+        stroke-width: 2px; 
+        stroke: #fff; 
+    }
+    #hour, #min, #sec {
+        stroke-width: 1px; 
+        fill: #333; 
+        stroke: #555;
+    }
+    #sec { 
+        stroke: #f55; 
+    }
 
 /* === TOGGLER === */
     .toggle-container{
-        /* transform: translate(-50%, -50%); */
         padding: 10% 0 10% 10%; 
     }
     .toggle-btn{
@@ -54,3 +68,4 @@ body>div {
     .toggle-btn.active > .inner-circle{
         margin-left: 77%;
     }
+

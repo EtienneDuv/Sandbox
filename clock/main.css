@@ -5,19 +5,20 @@ html body{
 body>div {
     margin-top: 5%;
 }
-#clock2 {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    color: #17D4FE;
-    font-size: 35px;
-    letter-spacing: 3px;
-}
 .center {
     text-align: center;
 }
-/* === CLOCK === */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* === CLOCK NORMAL === */
     #clock1 {
         max-height: 30%;
     }
@@ -33,6 +34,19 @@ body>div {
     #sec { 
         stroke: #f55; 
     }
+
+
+/* === CLOCK DIGITAL === */
+    #clock2 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #17D4FE;
+        font-size: 35px;
+        letter-spacing: 3px;
+    }
+
 
 /* === TOGGLER === */
     .toggle-container{

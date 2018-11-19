@@ -1,0 +1,255 @@
+html body {
+  background-color: #333333;
+  font-family: 'Orbitron';
+}
+
+html body > div {
+  margin-top: 5%;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.noselect, .sticky .toggle-container .toggle-btn .inner-text {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/* === CLOCK NORMAL === */
+#clock_SVG {
+  max-height: 30%;
+  z-index: 0;
+}
+
+#clock_SVG #face {
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+#clock_SVG #hour_SVG, #clock_SVG #min_SVG, #clock_SVG #sec_SVG {
+  stroke-width: 1px;
+  fill: #333;
+  stroke: #555;
+}
+
+#clock_SVG #sec_SVG {
+  stroke: #f55;
+}
+
+/* === CLOCK CSS === */
+#clockCSS {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50%;
+  border: 10px solid #67d2cb;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 1em auto;
+}
+
+#clockCSS .dash * {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#clockCSS .dash .top {
+  background: #333333;
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  margin: 0 auto;
+}
+
+#clockCSS .dash .right {
+  background: #333333;
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  margin: auto 0;
+  margin-left: 96%;
+}
+
+#clockCSS .dash .bottom {
+  background: #333333;
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  margin: 0 auto;
+  margin-top: 95%;
+}
+
+#clockCSS .dash .left {
+  background: #333333;
+  position: absolute;
+  width: 8px;
+  height: 3px;
+  margin: auto 0;
+}
+
+#clockCSS .dash .center {
+  background: #333333;
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  margin: auto;
+  border-radius: 100%;
+  z-index: 10;
+}
+
+#clockCSS #hour_CSS {
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: -4px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: time 60s infinite linear;
+          animation: time 60s infinite linear;
+}
+
+#clockCSS #hour_CSS:before {
+  position: absolute;
+  content: '';
+  background: #262626;
+  height: 20px;
+  width: 3px;
+  top: 67px;
+}
+
+#clockCSS #min_CSS {
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: -3px;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: rotate 3600s infinite linear;
+          animation: rotate 3600s infinite linear;
+}
+
+#clockCSS #min_CSS:before {
+  position: absolute;
+  content: '';
+  background: #262626;
+  height: 40px;
+  width: 1px;
+  top: 50px;
+}
+
+#clockCSS #sec_CSS {
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-animation: rotate 60s infinite linear;
+          animation: rotate 60s infinite linear;
+}
+
+#clockCSS #sec_CSS:before {
+  position: absolute;
+  content: '';
+  background: #fd1111;
+  height: 60px;
+  width: 2px;
+  top: 30px;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+/* === CLOCK DIGITAL === */
+#clockDigital {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  color: #17D4FE;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+/* === TOGGLER === */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20%;
+}
+
+.sticky .toggle-container {
+  padding: 10% 0 10% 10%;
+}
+
+.sticky .toggle-container .toggle-btn {
+  position: relative;
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 3px;
+  text-align: center;
+  background: white;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.sticky .toggle-container .toggle-btn > .inner-circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #333333;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.sticky .toggle-container .toggle-btn .inner-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.sticky .toggle-container .toggle-btn.active {
+  background: #17D4FE;
+}
+
+.sticky .toggle-container .toggle-btn.active > .inner-circle {
+  margin-left: 77%;
+}
+/*# sourceMappingURL=main.css.map */

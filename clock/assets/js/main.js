@@ -1,6 +1,7 @@
 function init(){
     initClockCSS();
     setInterval(setClock, 1000);
+    initToggler();
 }
 
 function setClock() {
@@ -54,4 +55,13 @@ function initClockCSS(){
     rotateZ(sec_CSS, 6 * s)
     rotateZ(min_CSS, 6 * m)
     rotateZ(hour_CSS, 30 * (h % 12) + m / 2)
+}
+
+function initToggler() {
+    document.getElementById("toggle_clockSVG").classList.add('active');
+    document.getElementById("toggle_clockCSS").classList.add('active');
+    document.getElementById("toggle_clockDigital").classList.add('active');
+    document.getElementById("toggle_timer").classList.add();
+
+    document.getElementById("timer").classList.add('hidden');
 }

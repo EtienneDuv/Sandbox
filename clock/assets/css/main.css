@@ -31,23 +31,23 @@ html body > div {
 }
 
 /* === CLOCK NORMAL === */
-#clock_SVG {
+#clockSVG {
   max-height: 30%;
   z-index: 0;
 }
 
-#clock_SVG #face {
+#clockSVG #face {
   stroke-width: 2px;
   stroke: #fff;
 }
 
-#clock_SVG #hour_SVG, #clock_SVG #min_SVG, #clock_SVG #sec_SVG {
+#clockSVG #hour_SVG, #clockSVG #min_SVG, #clockSVG #sec_SVG {
   stroke-width: 1px;
   fill: #333;
   stroke: #555;
 }
 
-#clock_SVG #sec_SVG {
+#clockSVG #sec_SVG {
   stroke: #f55;
 }
 

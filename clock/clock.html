@@ -20,25 +20,25 @@
         <div class="col-sm-2 center">  
             <div class="sticky">
                 <div class="toggle-container">
-                    <div class="toggle-btn" id="toggle-clock_SVG" onclick="toggleActive(this)">
+                    <div class="toggle-btn" id="toggle_clockSVG" onclick="toggleActive(this); toggleHidden(clockSVG)">
                         <div class="inner-text">SVG</div>
                         <div class="inner-circle"></div>
                     </div>
                 </div>
                 <div class="toggle-container">
-                    <div class="toggle-btn" id="toggle-clockCSS" onclick="toggleActive(this)">
+                    <div class="toggle-btn" id="toggle_clockCSS" onclick="toggleActive(this); toggleHidden(clockCSS)">
                         <div class="inner-text">CSS</div>
                         <div class="inner-circle"></div>
                     </div>
                 </div>
                 <div class="toggle-container">
-                    <div class="toggle-btn" id="toggle-clockDigital"  onclick="toggleActive(this)">
+                    <div class="toggle-btn" id="toggle_clockDigital"  onclick="toggleActive(this); toggleHidden(clockDigital)">
                         <div class="inner-text">Digital</div>
                         <div class="inner-circle"></div>
                     </div>
                 </div>
                 <div class="toggle-container">
-                    <div class="toggle-btn" id="toggle-timer" onclick="toggleActive(this)">
+                    <div class="toggle-btn" id="toggle_timer" onclick="toggleActive(this); toggleHidden(timer)">
                         <div class="inner-text">Timer</div>
                         <div class="inner-circle"></div>
                     </div>
@@ -47,7 +47,7 @@
 
         </div>
         <div class="col-sm-8 center">
-            <article id="clock_SVG">
+            <article id="clockSVG">
                 <svg viewBox="-120 0 350 250">
                     <g>
                         <circle id="face" cx="50" cy="50" r="45" />
@@ -71,6 +71,7 @@
                 <div id="sec_CSS"></div>
             </article>
             <article id="clockDigital"></article>
+            <article id="timer"></article>
         </div>        
     </div>
 </div>
